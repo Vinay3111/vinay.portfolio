@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vinay Bobade Portfolio</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: white;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #22c55e;
+}
+
+/* Card */
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+/* Skills */
+.skills li {
+  margin: 5px 0;
+}
+
+/* Project Buttons */
+.project a {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  background: #22c55e;
+  transition: 0.3s;
+}
+
+.project a:hover {
+  background: #16a34a;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Zoom */
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+#modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #94a3b8;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="profile.jpg" class="profile-img" alt="Profile Photo">
+    <h1>Vinay Bobade</h1>
+    <p>Aspiring Tech Intern | Grade 10 (CBSE)</p>
+    <p>The Orchid School, Pune</p>
+    <p>Email: iamvinay.bobade@gmail.com</p>
+  </div>
+
+  <!-- PROFILE SUMMARY -->
+  <div class="card">
+    <h2>Profile Summary</h2>
+    <p>
+      Curious and motivated Grade 10 student with a strong interest in technology and problem-solving.
+      Hands-on experience with HTML, Python, and digital tools, focused on building functional projects.
+    </p>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="card">
+    <h2>Technical Skills</h2>
+    <ul class="skills">
+      <li>Microsoft Office (Word, PowerPoint, Excel)</li>
+      <li>Canva (Design & Presentations)</li>
+      <li>HTML (Basic Web Development)</li>
+      <li>Python (Fundamentals)</li>
+    </ul>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="card project">
+    <h2>Projects</h2>
+
+    <p><b>Personal Portfolio Website</b></p>
+    <p><b>Python Logic-Based Applications</b></p>
+    <p><b>Digital Presentation Design</b></p>
+
+    <a href="Biodiversity.pptx" target="_blank">📊 View PPT</a>
+    <a href="project.html" target="_blank">💻 HTML Project</a>
+  </div>
+
+  <!-- ACHIEVEMENTS GALLERY -->
+  <div class="card">
+    <h2>🏆 Achievements</h2>
+    <div class="gallery">
+      <img src="achievement1.jpg" onclick="openModal(this.src)">
+      <img src="achievement2.jpg" onclick="openModal(this.src)">
+      <img src="achievement3.jpg" onclick="openModal(this.src)">
+      <img src="achievement4.jpg" onclick="openModal(this.src)">
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="card">
+    <h2>Education</h2>
+    <p>The Orchid School, Pune<br>Grade 10 (CBSE)</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 Vinay Bobade
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" onclick="closeModal()">
+  <img id="modal-img">
+</div>
+
+<script>
+function openModal(src) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modal-img").src = src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+
